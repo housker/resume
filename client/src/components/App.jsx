@@ -10,15 +10,18 @@ class App extends React.Component {
     }
   }
   render () {
-    <div>
-      <h3>App</h3>
-        <ul>
-          <li>Nav Bar</li>
-          <li>Resume</li>
-          <li>Bio</li>
-          <li>Github</li>
-        </ul>
-    </div>
+    return (
+      <div>
+        <h3>Resume App</h3>
+          <ul>
+            <li>Nav Bar</li>
+            <li>Resume</li>
+            <li>Bio</li>
+            <li>Github</li>
+          </ul>
+      </div>
+    )
+
   }
 }
 
