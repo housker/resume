@@ -1,4 +1,132 @@
-.wombat {
+* {
+  font-family: 'Bellefair', serif;
+}
+
+#first {
+  background-image: url(tunnel.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #e4e4e4;
+}
+
+/*.wombat {
   background-image: url("./darb.jpg");
   background-size: cover;
+}*/
+
+.vignette{
+  position:absolute;
+  width:100%; height:100%;
+  box-shadow:inset 0px 0px 150px 20px black;
+  mix-blend-mode: multiply;
+  -webkit-animation: vignette-anim 3s infinite; /* Safari 4+ */
+  -moz-animation:    vignette-anim 3s infinite; /* Fx 5+ */
+  -o-animation:      vignette-anim 3s infinite; /* Opera 12+ */
+  animation:         vignette-anim 3s infinite; /* IE 10+, Fx 29+ */
 }
+
+.noise {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    pointer-events: none;
+    opacity: .15;
+}
+
+.line{
+  position:absolute;
+  height:100vh; width:1px;
+  opacity:0.1;
+  background-color:#000;
+}
+
+.dot{
+  width:3px;
+  height:2px;
+  background-color:white;
+  position:absolute;
+  opacity:0.3;
+}
+
+
+html,
+body,
+header,
+.jarallax {
+  height: 100vh;
+}
+
+html,
+body,
+header,
+.intro-2 {
+  height: 700px;
+}
+
+.jarallax {
+  overflow:hidden;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+
+  height: 100vh;
+
+  background: linear-gradient(to right, rgba(36,31,31,1) 0%, rgba(36,31,31,1) 32%, rgba(74,71,70,1) 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.blurb {
+  font-size: 19px;
+  text-align: center;
+}
+
+.pfbtn {
+  padding: 4px;
+  margin: 3px;
+}
+
+.rbtn {
+  padding: 4px;
+  margin: 3px;
+}
+
+
+
+
+@-webkit-keyframes vignette-anim {
+  0%   , 100%{ opacity: 1; }
+  50% { opacity: 0.7; }
+}
+@-moz-keyframes vignette-anim {
+  0%   , 100%{ opacity: 1; }
+  50% { opacity: 0.7; }
+}
+@-o-keyframes vignette-anim {
+  0%   , 100%{ opacity: 1; }
+  50% { opacity: 0.7; }
+}
+@keyframes vignette-anim {
+  0%   , 100%{ opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+
+#second {
+  background-image: url(cornfield.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+

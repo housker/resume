@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import '../assets/index.css';
-import image from '../assets/darb.jpg';
+import '../assets/tunnel.jpg';
+import '../assets/cornfield.jpg';
+import rzoogg from '../assets/rzoogg.js'
 import Landing from './Landing.jsx';
 import Projects from './Projects.jsx';
+// If interested in refactoring with mdbootstrap . . . https://mdbootstrap.com/support/webpack-support-eta/
 
 
 class App extends React.Component {
@@ -14,53 +17,53 @@ class App extends React.Component {
 
     }
   }
+
+  componentDidMount() {
+    window.executeHome();
+  }
+
   render () {
     return (
       <div>
-      <BrowserRouter>
-        <div>
-
-
-
-<nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
-  <a className="navbar-brand" href="#">Navbar</a>
-
-  <div className="wombat collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li className="nav-item active">
-        <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-      </li>
-      <li className="nav-item active">
-        <Link to="/projects">Projects</Link>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form className="form-inline my-2 my-lg-0">
-      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-
-
-
-
-
-
-        <Switch>
-          <Route exact path='/' component={Landing} />
-          <Route exact path='/projects' component={Projects} />
-        </Switch>
+<header>
+    <div id="first" className="view jarallax" data-jarallax='{"speed": 0.2}'>
+        <div className="mask rgba-white-light titleCont">
+            <div className="container flex-center text-center">
+              <div className="row mt-5">
+                <div className="col-md-12 wow fadeIn mb-3" id="main-title">
+                  <h1 className="display-3 mb-2 wow fadeInDown" data-wow-delay="0.3s">Adelle Housker</h1>
+                  <h5 className="text-uppercase mb-3 mt-1 font-weight-bold wow fadeIn" data-wow-delay="0.4s">Web developer</h5>
+                </div>
+              </div>
+            </div>
         </div>
-      </BrowserRouter>
+      <canvas id="noise" className="noise"></canvas>
+      <div className="vignette"></div>
+      </div>
+      <div className="container">
+          <div className="row">
+              <div className="blurb col-md-12 text-center mb-3">
+                  <h3 className="font-weight-bold light-blue-text my-3">"You are currently operating under several erroneous assumptions. Normally, people will just delete your email and leave you to your own problems. But for me, I believe that there may be some hope for you, if you'll take a moment to consider the reality of your faults."</h3>
+              </div>
+          </div>
+      </div>
+      <div id="second" className="view jarallax intro-2">
+        <div className="mask rgba-pink-slight">
+          <button className="pfbtn">Portfolio</button>
+          <button className="rbtn">Resume</button>
+        </div>
+      </div>
+
+
+
+</header>
+
+
+
+
+
+
+
       </div>
     )
 
