@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import dashboard from '../assets/dashboard.png';
 import criboard from '../assets/criboard.png';
 import windowicon from '../assets/windowicon.svg';
+import test from '../assets/test.jpg';
 
 function Portfolio(props) {
   return (
