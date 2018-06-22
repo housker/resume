@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+// import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import '../assets/index.css';
 import '../assets/tunnel.jpg';
 import '../assets/cornfield.jpg';
-import rzoogg from '../assets/rzoogg.js'
+import rzoogg from '../assets/rzoogg.js';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Landing from './Landing.jsx';
 import Projects from './Projects.jsx';
+import Portfolio from './Portfolio.jsx';
 // If interested in refactoring with mdbootstrap . . . https://mdbootstrap.com/support/webpack-support-eta/
+//colors: https://www.pinterest.com/pin/142848619405813315/
 
 
 class App extends React.Component {
@@ -49,12 +52,10 @@ class App extends React.Component {
       </div>
       <div id="second" className="view jarallax intro-2">
         <div className="mask rgba-pink-slight">
-          <button className="pfbtn">Portfolio</button>
+        <button className="pfbtn"><Link to="/portfolio">Portfolio</Link></button>
           <button className="rbtn">Resume</button>
         </div>
       </div>
-
-
 
 </header>
 
