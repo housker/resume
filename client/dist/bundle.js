@@ -97,6 +97,28 @@ eval("module.exports = __webpack_require__.p + \"53a14dbb9d2f12b3736af243e274976
 
 /***/ }),
 
+/***/ "./client/src/assets/criboard.png":
+/*!****************************************!*\
+  !*** ./client/src/assets/criboard.png ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"f77bdf136ea6d632d8644cfb14ccb584.png\";\n\n//# sourceURL=webpack:///./client/src/assets/criboard.png?");
+
+/***/ }),
+
+/***/ "./client/src/assets/dashboard.png":
+/*!*****************************************!*\
+  !*** ./client/src/assets/dashboard.png ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"afbe85abf882e903a440f2d724d2724b.png\";\n\n//# sourceURL=webpack:///./client/src/assets/dashboard.png?");
+
+/***/ }),
+
 /***/ "./client/src/assets/index.css":
 /*!*************************************!*\
   !*** ./client/src/assets/index.css ***!
@@ -127,6 +149,17 @@ eval("/* Text animation adapted from\nhttps://codepen.io/mimikos/pen/QMjjzy\na P
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("module.exports = __webpack_require__.p + \"7b7f426ea72908d38a6c7f9d3d7e8a66.jpg\";\n\n//# sourceURL=webpack:///./client/src/assets/tunnel.jpg?");
+
+/***/ }),
+
+/***/ "./client/src/assets/windowicon.svg":
+/*!******************************************!*\
+  !*** ./client/src/assets/windowicon.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"90a3b607b882c5da9c3ff2eeb9c7edb2.svg\";\n\n//# sourceURL=webpack:///./client/src/assets/windowicon.svg?");
 
 /***/ }),
 
@@ -162,7 +195,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Portfolio(props) {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    _react2.default.createElement(\n      \"a\",\n      { className: \"d-block\", href: \"https://pjjp9nvkr0.codesandbox.io/#\" },\n      \"React Dashboard\"\n    ),\n    _react2.default.createElement(\n      \"a\",\n      { className: \"d-block\", href: \"https://codesandbox.io/s/pjjp9nvkr0\" },\n      \"Sandbox\"\n    )\n  );\n}\n\nexports.default = Portfolio;\n\n//# sourceURL=webpack:///./client/src/components/Portfolio.jsx?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _dashboard = __webpack_require__(/*! ../assets/dashboard.png */ \"./client/src/assets/dashboard.png\");\n\nvar _dashboard2 = _interopRequireDefault(_dashboard);\n\nvar _criboard = __webpack_require__(/*! ../assets/criboard.png */ \"./client/src/assets/criboard.png\");\n\nvar _criboard2 = _interopRequireDefault(_criboard);\n\nvar _windowicon = __webpack_require__(/*! ../assets/windowicon.svg */ \"./client/src/assets/windowicon.svg\");\n\nvar _windowicon2 = _interopRequireDefault(_windowicon);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Portfolio(props) {\n  return _react2.default.createElement(\n    'div',\n    null,\n    _react2.default.createElement(\n      'a',\n      { className: 'd-block', href: 'https://safe-tundra-98409.herokuapp.com/' },\n      'Criboard'\n    ),\n    _react2.default.createElement('img', { src: _criboard2.default, height: '100' }),\n    _react2.default.createElement(\n      'p',\n      null,\n      'Developed through github version control, this represents the initial stages of a project aimed to make apartment living and management more collaboartive for both tenants and landlords. Criboard is a full stack app using Sequelize for database management, Passport.js for user authentication, and Multer for form parsing. The client utilizes RESTful APIs to populate maps and queries. React Router and React are used for routing, managing state, and rendering.'\n    ),\n    _react2.default.createElement(\n      'a',\n      { className: 'd-block', href: 'https://codesandbox.io/s/pjjp9nvkr0' },\n      'Dashboard Sandbox'\n    ),\n    _react2.default.createElement('img', { src: _dashboard2.default, height: '100' }),\n    _react2.default.createElement(\n      'p',\n      null,\n      'This personal finance dashboard is a mock-up demonstrating UI designed for a responsive, client-centric, visually rich interactive experience. It utilizes React for state management and rendering, Bootstrap for adaptable styling, and Chart.js to dynamically communicate raw data into a relatabale, easily accessible format. Make sure to click the ',\n      _react2.default.createElement('img', { src: _windowicon2.default, height: '17' }),\n      ' icon to view the full page.'\n    )\n  );\n}\n\nexports.default = Portfolio;\n\n//# sourceURL=webpack:///./client/src/components/Portfolio.jsx?");
 
 /***/ }),
 
