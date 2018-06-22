@@ -53,7 +53,7 @@ class App extends React.Component {
       <div id="second" className="view jarallax intro-2">
         <div className="mask rgba-pink-slight">
         <button className="pfbtn"><Link to="/portfolio">Portfolio</Link></button>
-          <button className="rbtn">Resume</button>
+        <button className="rbtn"><Link to="/resume">Resume</Link></button>
         </div>
       </div>
 
