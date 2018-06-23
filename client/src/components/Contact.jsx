@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Resume from './Resume.jsx';
-import test from '../assets/test.jpg';
 
 function Contact(props) {
   return (

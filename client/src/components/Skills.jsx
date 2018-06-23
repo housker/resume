@@ -1,22 +1,139 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import test from '../assets/test.jpg';
+import iconjs from '../assets/icons/iconjs.png';
+import iconnode from '../assets/icons/iconnode.png';
 
-function Skills(props) {
-  return (
-    <div>
-      <div>Javascript</div>
-      <div>Node.js</div>
-      <div>Express</div>
-      <div>MongoDB</div>
-      <div>React</div>
-      <div>Angular</div>
-      <div>Sequelize</div>
-      <div>Ethereum</div>
-      <div>IPFS</div>
-      <a href="https://leetcode.com/housker/">Algorithms</a>
-    </div>
-  );
+import iconexpress from '../assets/icons/iconexpress.svg';
+import iconmongo from '../assets/icons/iconmongo.png';
+
+import iconreact from '../assets/icons/iconreact.svg';
+import iconangular from '../assets/icons/iconangular.svg';
+
+import iconsequelize from '../assets/icons/iconsequelize.png';
+import iconipfs from '../assets/icons/iconipfs.png';
+
+class Skills extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      colors: ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"],
+      numBalls: 30,
+      balls: []
+    };
+    this.drawBall = this.drawBall.bind(this);
+    this.bouce = this.bounce.bind(this);
+  }
+
+  componentDidMount() {
+    this.drawBall();
+    this.bounce();
+  }
+
+  drawBall() {
+    for (let i = 0; i < this.state.numBalls; i++) {
+      let ball = document.createElement("circle");
+      ball.classList.add("ball");
+      ball.style.background = this.state.colors[Math.floor(Math.random() * this.state.colors.length)];
+      ball.style.opacity = 0.2
+      ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+      ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+      ball.style.transform = `scale(${Math.random()})`;
+      ball.style.width = `${Math.random()}em`;
+      ball.style.height = ball.style.width;
+      this.setState({balls: this.state.balls.push(ball)}, () => console.log(this.state.balls))
+      document.body.append(ball);
+    }
+  }
+
+  bounce() {
+    this.state.balls.forEach((el, i, ra) => {
+      let to = {
+        x: Math.random() * (i % 2 === 0 ? -11 : 11),
+        y: Math.random() * 12
+      };
+
+      let anim = el.animate(
+        [
+          { transform: "translate(0, 0)" },
+          { transform: `translate(${to.x}rem, ${to.y}rem)` }
+        ],
+        {
+          duration: (Math.random() + 1) * 2000,
+          direction: "alternate",
+          fill: "both",
+          iterations: Infinity,
+          easing: "ease-in-out"
+        }
+      );
+    });
+  }
+
+
+  render() {
+    return (
+      <div className="row port-row d-flex-row">
+        <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div className="box">
+            <div className="skill">
+              <h4>Javascript</h4>
+              <img src={iconjs} height="100px" width="100px" />
+            </div>
+          </div>
+          <div className="box">
+            <div className="skill">
+              <h4>Node.js</h4>
+              <img src={iconnode} height="100px" width="100px" />
+            </div>
+          </div>
+        </div>
+
+        <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div className="box">
+            <div className="skill">
+              <h4>Express</h4>
+              <img src={iconexpress} height="100px" width="100px" />
+            </div>
+          </div>
+          <div className="box">
+            <div className="skill">
+              <h4>Mongo</h4>
+              <img src={iconmongo} height="100px" width="100px" />
+            </div>
+          </div>
+        </div>
+
+        <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div className="box">
+            <div className="skill">
+              <h4>React</h4>
+              <img src={iconreact} height="100px" width="100px" />
+            </div>
+          </div>
+          <div className="box">
+            <div className="skill">
+              <h4>Angular</h4>
+              <img src={iconangular} height="100px" width="100px" />
+            </div>
+          </div>
+        </div>
+
+        <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div className="box">
+            <div className="skill">
+              <h4>Sequeliz</h4>
+              <img src={iconsequelize} height="100px" width="100px" />
+            </div>
+          </div>
+          <div className="box">
+            <div className="skill">
+             <h4> IPFS</h4>
+              <img src={iconipfs} height="100px" width="100px" />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Skills;
@@ -24,6 +141,8 @@ export default Skills;
 //background image format included in bootstrap demo:
 // <img className="d-block w-100" src={test} alt="First slide" />
 
+
+// <a href="https://leetcode.com/housker/">Algorithms</a>
 
 // <div>Jumpstarts</div>
 // <ul>

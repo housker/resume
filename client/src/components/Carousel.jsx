@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import Skills from './Skills.jsx';
 import Portfolio from './Portfolio.jsx';
 import Contact from './Contact.jsx';
-import test from '../assets/test.jpg';
 
 function Carousel(props) {
   return (
