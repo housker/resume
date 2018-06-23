@@ -8,96 +8,62 @@ class Portfolio extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      highlight: false,
       test: [
-        {title: 'title1', description: 'description1', image: 'https://picsum.photos/500/400/?random'},
-        {title: 'title2', description: 'description2', image: 'https://picsum.photos/500/400/?random'},
-        {title: 'title3', description: 'description3', image: 'https://picsum.photos/500/400/?random'},
-        {title: 'title4', description: 'description4', image: 'https://picsum.photos/500/400/?random'},
-        {title: 'title5', description: 'description5', image: 'https://picsum.photos/500/400/?random'},
-        {title: 'title6', description: 'description6', image: 'https://picsum.photos/500/400/?random'}
+        {index: 0, title: 'title1', description: 'description1', image: 'https://picsum.photos/500/400/?random'},
+        {index: 1, title: 'title2', description: 'description2', image: 'https://picsum.photos/500/400/?random'},
+        {index: 2, title: 'title3', description: 'description3', image: 'https://picsum.photos/500/400/?random'},
+        {index: 3, title: 'title4', description: 'description4', image: 'https://picsum.photos/500/400/?random'},
+        {index: 4, title: 'title5', description: 'description5', image: 'https://picsum.photos/500/400/?random'},
+        {index: 5, title: 'title6', description: 'description6', image: 'https://picsum.photos/500/400/?random'}
       ]
-
     };
     this.light = this.light.bind(this);
-    this.myThing;
+    this.resume = this.resume.bind(this);
   }
 
-  componentWillMount() {
-        this.myThing = this.state.test.slice(0, 2).map((item, i) => {
-            <div key={i} className="panel" onMouseOver={this.light}>
-              <div id="text">{item.title}</div>
-              <img className="port-img" img-responsive src={item.image}/>
-            </div>
-          })
+  light(i) {
+    this.setState({highlight: i});
   }
 
-  componentDidMount() {
-    let map = this.state.test.slice(0, 2).map((project, i) => 'my' + project.title)
-    console.log('map: ', map)
-    console.log('this.state.test.slice(0, 2)', this.state.test.slice(0, 2))
-            this.myThing = this.state.test.slice(0, 2).map((item, i) => {
-            <div key={i} className="panel" onMouseOver={this.light}>
-              <div id="text">{item.title}</div>
-              <img className="port-img" img-responsive src={item.image}/>
-            </div>
-          })
-    console.log('this.myThing: ', this.myThing)
-
-  }
-
-  light() {
-    console.log('I am lightning!')
-
+  resume() {
+    this.setState({highlight: false});
   }
 
   render() {
-    console.log('this.state.test: ', this.state.test)
-
-
   return (
     <div>
       <div className="row port-row d-flex-row">
-
-
-
         <div className="col port-col col-lg-4 col-md-6 col-sm-12">
-          {this.state.test.slice(0, 2).map((project, i) => (
-            <div className="panel">
-              <div id="text">{project.title}</div>
+          {this.state.test.slice(0, 2).map(project => (
+            <div key={project.index} className="panel" onMouseOver={() => this.light(project.index)} onMouseLeave={this.resume}>
+              {this.state.highlight === project.index && <div className="layer" />}
+              {this.state.highlight === project.index ? (<div id="overlay" className="text">{project.description}</div>) : (<div className="text">{project.title}</div>)}
               <img className="port-img" img-responsive src={project.image}/>
             </div>
           ))}
         </div>
-
         <div className="col port-col col-lg-4 col-md-6 col-sm-12">
-          {this.state.test.slice(2, 4).map((project, i) => (
-            <div className="panel">
-              <div id="text">{project.title}</div>
+          {this.state.test.slice(2, 4).map(project => (
+            <div key={project.index} className="panel" onMouseOver={() => this.light(project.index)} onMouseLeave={this.resume}>
+              {this.state.highlight === project.index && <div className="layer" />}
+              {this.state.highlight === project.index ? (<div id="overlay" className="text">{project.description}</div>) : (<div className="text">{project.title}</div>)}
               <img className="port-img" img-responsive src={project.image}/>
             </div>
           ))}
         </div>
-
         <div className="col port-col col-lg-4 col-md-6 col-sm-12">
-          {this.state.test.slice(4, 6).map((project, i) => (
-            <div className="panel">
-              <div id="text">{project.title}</div>
+          {this.state.test.slice(4, 6).map(project => (
+            <div key={project.index} className="panel" onMouseOver={() => this.light(project.index)} onMouseLeave={this.resume}>
+              {this.state.highlight === project.index && <div className="layer" />}
+              {this.state.highlight === project.index ? (<div id="overlay" className="text">{project.description}</div>) : (<div className="text">{project.title}</div>)}
               <img className="port-img" img-responsive src={project.image}/>
             </div>
           ))}
         </div>
-
-
-
       </div>
     </div>
-  );
-
-
-  }
-
-
+  )}
 }
 
 export default Portfolio;

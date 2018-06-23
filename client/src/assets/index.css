@@ -145,57 +145,8 @@ header,
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#1B1B1B' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
-/*.container {
-  height: 100vh;
-  width: 100vh;
-  border: solid;
-}*/
 
-/*.row {
-  height: 33vh;
-  width: 100vh;
-  border: solid;
-}
-
-.col {
-  height: 100vh;
-  width: 33vh;
-  border: solid;
-}*/
-
-.port-row {
-  height: 100vh;
-}
-
-.port-col {
-  padding: 0px !important;
-}
-
-/*.port-img {
-  width: 100%;
-  height: 50%;
-}*/
-
-.panel {
-  position: relative;
-  text-align: center;
-  width: 100%;
-  height: 50%;
-}
-
-/*#text:hover: {
-  opacity: 1;
-}*/
-
-#text {
-  opacity: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
+/*==== Skills =====*/
 
 .box {
   position:relative;
@@ -218,103 +169,40 @@ header,
   z-index: -1;
 }
 
+/*===== Portfolio =====*/
 
-/*#overlay {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2;
-    cursor: pointer;
-}*/
-
-
-/*#overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 2;
-  opacity: 1;
-  background: rgba(39, 42, 43, 0.8);
-  transition: opacity 200ms ease-in-out;
-  border-radius: 4px;
-  margin: -15px 0 0 -15px;
-  button {
-  margin:5px;
-  }
-  &:hover {
-    opacity: 1;
-  }
-}*/
-
-
-/*
-#text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 50px;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}*/
-
-/*.skill {
-      display: block;
-    margin-left: auto;
-    margin-right: auto
-  position: relative;
-  top: 50%;
-  display: table-cell;
-  vertical-align: middle;
-}*/
-
-
-
-/*.port-row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.port-row {
   height: 100vh;
 }
 
-.port-column {
+.port-col {
   padding: 0px !important;
-  margin:0px !important;
-    -ms-flex: 33%;
-    flex: 33%;
-    max-width: 33%;
-    overflow-y: hidden;
 }
 
-.port-column img {
-  object-fit: none;
-  vertical-align: middle;
-  overflow-y: hidden;
+.panel {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 50%;
 }
 
-@media screen and (max-width: 800px) {
-  .port-column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
+.layer {
+  background-color: #604922;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-@media screen and (max-width: 600px) {
-  .port-column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}*/
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-
-
+#overlay {
+  color: white;
+}
