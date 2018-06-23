@@ -40,8 +40,8 @@ class Skills extends React.Component {
       ball.style.transform = `scale(${Math.random()})`;
       ball.style.width = `${Math.random()}em`;
       ball.style.height = ball.style.width;
-      this.setState({balls: this.state.balls.push(ball)}, () => console.log(this.state.balls))
-      document.body.append(ball);
+      this.setState({balls: this.state.balls.push(ball)});
+      this.refs.skills.append(ball)
     }
   }
 
@@ -71,7 +71,7 @@ class Skills extends React.Component {
 
   render() {
     return (
-      <div className="row port-row d-flex-row">
+      <div ref="skills" className="row port-row d-flex-row">
         <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <div className="box">
             <div className="skill">

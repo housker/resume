@@ -4,7 +4,18 @@ import dashboard from '../assets/dashboard.png';
 import criboard from '../assets/criboard.png';
 import windowicon from '../assets/windowicon.svg';
 
-function Portfolio(props) {
+class Portfolio extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount() {
+  }
+
+  render() {
+
+
   return (
     <div>
       <div className="row port-row d-flex-row">
@@ -23,6 +34,11 @@ function Portfolio(props) {
       </div>
     </div>
   );
+
+
+  }
+
+
 }
 
 export default Portfolio;
