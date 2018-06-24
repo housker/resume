@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Skills from './Skills.jsx';
 import Portfolio from './Portfolio.jsx';
-import Contact from './Contact.jsx';
+import Resume from './Resume.jsx';
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class Carousel extends React.Component {
             <Portfolio />
           </div>
           <div className="carousel-item">
-            <Contact />
+            <Resume />
           </div>
         </div>
         <a className="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
@@ -35,8 +35,6 @@ class Carousel extends React.Component {
       </div>
     );
   }
-
-
 }
 
 export default Carousel;

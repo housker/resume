@@ -1,16 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import iconjs from '../assets/icons/iconjs.png';
-import iconnode from '../assets/icons/iconnode.png';
-
-import iconexpress from '../assets/icons/iconexpress.svg';
-import iconmongo from '../assets/icons/iconmongo.png';
-
-import iconreact from '../assets/icons/iconreact.svg';
-import iconangular from '../assets/icons/iconangular.svg';
-
-import iconsequelize from '../assets/icons/iconsequelize.png';
-import iconipfs from '../assets/icons/iconipfs.png';
+var images = require.context('../assets/icons', false, /\.(png|jpg|gif|svg)$/);
 
 class Skills extends React.Component {
   constructor(props) {
@@ -76,13 +66,13 @@ class Skills extends React.Component {
           <div className="box">
             <div className="skill">
               <h4>Javascript</h4>
-              <img src={iconjs} height="100px" width="100px" />
+              <img src={images('./iconjs.png')} height="100px" width="100px" />
             </div>
           </div>
           <div className="box">
             <div className="skill">
               <h4>Node.js</h4>
-              <img src={iconnode} height="100px" width="100px" />
+              <img src={images('./iconnode.png')} height="100px" width="100px" />
             </div>
           </div>
         </div>
@@ -91,13 +81,13 @@ class Skills extends React.Component {
           <div className="box">
             <div className="skill">
               <h4>Express</h4>
-              <img src={iconexpress} height="100px" width="100px" />
+              <img src={images('./iconexpress.svg')} height="100px" width="100px" />
             </div>
           </div>
           <div className="box">
             <div className="skill">
               <h4>Mongo</h4>
-              <img src={iconmongo} height="100px" width="100px" />
+              <img src={images('./iconmongo.png')} height="100px" width="100px" />
             </div>
           </div>
         </div>
@@ -106,13 +96,13 @@ class Skills extends React.Component {
           <div className="box">
             <div className="skill">
               <h4>React</h4>
-              <img src={iconreact} height="100px" width="100px" />
+              <img src={images('./iconreact.svg')} height="100px" width="100px" />
             </div>
           </div>
           <div className="box">
             <div className="skill">
               <h4>Angular</h4>
-              <img src={iconangular} height="100px" width="100px" />
+              <img src={images('./iconangular.svg')} height="100px" width="100px" />
             </div>
           </div>
         </div>
@@ -121,13 +111,13 @@ class Skills extends React.Component {
           <div className="box">
             <div className="skill">
               <h4>Sequeliz</h4>
-              <img src={iconsequelize} height="100px" width="100px" />
+              <img src={images('./iconsequelize.png')} height="100px" width="100px" />
             </div>
           </div>
           <div className="box">
             <div className="skill">
              <h4> IPFS</h4>
-              <img src={iconipfs} height="100px" width="100px" />
+              <img src={images('./iconipfs.png')} height="100px" width="100px" />
             </div>
           </div>
         </div>
@@ -137,9 +127,6 @@ class Skills extends React.Component {
 }
 
 export default Skills;
-
-//background image format included in bootstrap demo:
-// <img className="d-block w-100" src={test} alt="First slide" />
 
 
 // <a href="https://leetcode.com/housker/">Algorithms</a>

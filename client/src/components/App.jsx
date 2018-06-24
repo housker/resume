@@ -1,24 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import '../assets/index.css';
 import '../assets/tunnel.jpg';
 import '../assets/cornfield.jpg';
 import rzoogg from '../assets/rzoogg.js';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import Landing from './Landing.jsx';
-import Projects from './Projects.jsx';
+import { Link } from 'react-router-dom';
 import Portfolio from './Portfolio.jsx';
-// If interested in refactoring with mdbootstrap . . . https://mdbootstrap.com/support/webpack-support-eta/
-//colors: https://www.pinterest.com/pin/142848619405813315/
-
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    }
+    this.state = {};
   }
 
   componentDidMount() {
@@ -56,7 +48,6 @@ class App extends React.Component {
         </header>
       </div>
     )
-
   }
 }
 
