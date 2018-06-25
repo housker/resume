@@ -8,7 +8,7 @@ class Portfolio extends React.Component {
     super(props);
     this.state = {
       highlight: false,
-      test: [
+      projects: [
         {index: 0, title: 'Criboard', description: 'Developed through github version control, this represents the initial stages of a project aimed to make apartment living and management more collaboartive for both tenants and landlords. Criboard is a full stack app using Sequelize for database management, Passport.js for user authentication, and Multer for form parsing. The client utilizes RESTful APIs to populate maps and queries. React Router and React are used for routing, managing state, and rendering.', image: './tncriboard.png', link: 'https://safe-tundra-98409.herokuapp.com/'},
         {index: 1, title: 'Financial Dashboard', description: 'This personal finance dashboard is a mock-up demonstrating UI designed for a responsive, client-centric, visually rich interactive experience. It utilizes React for state management and rendering, Bootstrap for adaptable styling, and Chart.js to dynamically communicate raw data into a relatabale, easily accessible format.', image: './tndashboard.png', link: 'https://codesandbox.io/s/pjjp9nvkr0'},
         {index: 2, title: 'title3', description: 'description3', image: './tndashboard.png', link: 'https://safe-tundra-98409.herokuapp.com/'},
@@ -19,7 +19,6 @@ class Portfolio extends React.Component {
     };
     this.light = this.light.bind(this);
     this.resume = this.resume.bind(this);
-    this.test = (<p>This personal finance dashboard is a mock-up demonstrating UI designed for a responsive, client-centric, visually rich interactive experience. It utilizes React for state management and rendering, Bootstrap for adaptable styling, and Chart.js to dynamically communicate raw data into a relatabale, easily accessible format. Make sure to click the <img src={windowicon} height="17"></img> icon to view the full page.</p>)
   }
 
   light(i) {
@@ -35,16 +34,7 @@ class Portfolio extends React.Component {
     <div>
       <div className="row port-row d-flex-row">
         <div className="col port-col col-lg-4 col-md-6 col-sm-12">
-          {this.state.test.slice(0, 2).map(project => (
-            <div key={project.index} className="panel" onMouseOver={() => this.light(project.index)} onMouseLeave={this.resume}>
-              {this.state.highlight === project.index && <div className="layer" />}
-              {this.state.highlight === project.index ? (<a id="overlay" className="text" href={project.link}>{project.description.slice(0)}</a>) : (<h3 className="text">{project.title}</h3>)}
-              <img className="port-img" img-responsive src={images(project.image)} height="400" width="500"/>
-            </div>
-          ))}
-        </div>
-        <div className="col port-col col-lg-4 col-md-6 col-sm-12">
-          {this.state.test.slice(2, 4).map(project => (
+          {this.state.projects.slice(0, 2).map(project => (
             <div key={project.index} className="panel" onMouseOver={() => this.light(project.index)} onMouseLeave={this.resume}>
               {this.state.highlight === project.index && <div className="layer" />}
               {this.state.highlight === project.index ? (<a id="overlay" className="text" href={project.link}>{project.description}</a>) : (<h3 className="text">{project.title}</h3>)}
@@ -53,7 +43,16 @@ class Portfolio extends React.Component {
           ))}
         </div>
         <div className="col port-col col-lg-4 col-md-6 col-sm-12">
-          {this.state.test.slice(4, 6).map(project => (
+          {this.state.projects.slice(2, 4).map(project => (
+            <div key={project.index} className="panel" onMouseOver={() => this.light(project.index)} onMouseLeave={this.resume}>
+              {this.state.highlight === project.index && <div className="layer" />}
+              {this.state.highlight === project.index ? (<a id="overlay" className="text" href={project.link}>{project.description}</a>) : (<h3 className="text">{project.title}</h3>)}
+              <img className="port-img" img-responsive src={images(project.image)} height="400" width="500"/>
+            </div>
+          ))}
+        </div>
+        <div className="col port-col col-lg-4 col-md-6 col-sm-12">
+          {this.state.projects.slice(4, 6).map(project => (
             <div key={project.index} className="panel" onMouseOver={() => this.light(project.index)} onMouseLeave={this.resume}>
               {this.state.highlight === project.index && <div className="layer" />}
               {this.state.highlight === project.index ? (<a id="overlay" className="text" href={project.link}>{project.description}</a>) : (<h3 className="text">{project.title}</h3>)}
