@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import resume from '../assets/Housker2016.pdf';
+import resume from '../assets/Housker2018.pdf';
 var images = require.context('../assets/icons', false, /\.(png|jpg|gif|svg)$/);
 
 function Resume(props) {
