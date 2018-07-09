@@ -12,7 +12,7 @@ class Carousel extends React.Component {
 
   render() {
     return (
-      <div id="carouselControls" className="carousel slide" data-ride="carousel" data-pause="hover">
+      <div id="carouselControls" className="carousel slide" data-ride="carousel" data-pause="hover" data-interval="false">
         <div className="carousel-inner">
           <div className="carousel-item active">
           <Skills />
