@@ -335,7 +335,7 @@ eval("module.exports = __webpack_require__.p + \"ebe94cdeaf455d946a75f0fd1602560
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"677a1388accdefc2221acd7d8f34be64.png\";\n\n//# sourceURL=webpack:///./client/src/assets/thumbnails/tngitsaga.png?");
+eval("module.exports = __webpack_require__.p + \"2c685bafa6b904e118cf3bcb298b0de6.png\";\n\n//# sourceURL=webpack:///./client/src/assets/thumbnails/tngitsaga.png?");
 
 /***/ }),
 
